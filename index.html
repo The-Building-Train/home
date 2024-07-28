@@ -1,134 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page</title>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KL1SY9HPQR"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-KL1SY9HPQR');
-  </script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    .sticky-header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #333;
-      color: white;
-      padding: 10px 20px;
-      text-align: left;
-      z-index: 1000;
-    }
-    .sticky-header .title {
-      margin: 0;
-      font-size: 24px;
-    }
-    header {
-      background: linear-gradient(to right, #ff7e5f, #feb47b);
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-      margin-top: 50px; /* Offset for sticky header */
-      height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    header h1 {
-      font-size: 48px;
-      margin: 0;
-    }
-    header p {
-      font-size: 18px;
-      margin: 10px 0 0;
-    }
-    section {
-      padding: 20px;
-    }
-    .section-title {
-      font-size: 24px;
-      margin: 20px 0 10px;
-    }
-    .section-content {
-      font-size: 16px;
-    }
-    .card-container {
-      display: flex;
-      gap: 20px;
-    }
-    .card {
-      background: #f4f4f4;
-      padding: 20px;
-      border-radius: 8px;
-      flex: 1;
-    }
-    .image-text-section {
-      display: flex;
-      gap: 20px;
-    }
-    .image-text-section img {
-      max-width: 50%;
-      border-radius: 8px;
-    }
-    footer {
-      background: #333;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Building Train</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KL1SY9HPQR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KL1SY9HPQR');
+    </script>
+    <style>
+        /* CSS for sticky header, hero section, etc. */
+    </style>
 </head>
 <body>
-  <div class="sticky-header">
-    <span class="title">The Building Train</span>
-  </div>
-  <header>
-    <h1>What if a machine could build a building?</h1>
-    <p>This is a secondary text explaining more about the concept. It can be one or two sentences long.</p>
-  </header>
-  <section>
-    <h2 class="section-title">Section 1: Horizontal Cards</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>Card 1</h3>
-        <p>Content for the first card.</p>
-      </div>
-      <div class="card">
-        <h3>Card 2</h3>
-        <p>Content for the second card.</p>
-      </div>
-      <div class="card">
-        <h3>Card 3</h3>
-        <p>Content for the third card.</p>
-      </div>
-    </div>
-  </section>
-  <section>
-    <h2 class="section-title">Section 2: Image and Text</h2>
-    <div class="image-text-section">
-      <img src="https://via.placeholder.com/400" alt="Placeholder Image">
-      <div>
-        <p>Content beside the image. This can be a description or any relevant information.</p>
-      </div>
-    </div>
-  </section>
-  <section>
-    <h2 class="section-title">Section 3: Simple Text</h2>
-    <p class="section-content">This is a simple text section with some content.</p>
-  </section>
-  <footer>
-    <p>&copy; 2024 The Building Train. All rights reserved.</p>
-    <p>Privacy Policy | Terms of Service</p>
-  </footer>
+    <header class="sticky-header">
+        <h1>The Building Train</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>What if a machine could build a building?</h1>
+        <p>Exploring the future of automated construction</p>
+    </section>
+    <section class="cards">
+        <!-- Content for cards section -->
+    </section>
+    <section class="image-text">
+        <!-- Content for image and text section -->
+    </section>
+    <section class="another-section">
+        <!-- Content for another unique section -->
+    </section>
+    <footer>
+        <p>&copy; 2024 The Building Train. All rights reserved.</p>
+    </footer>
 </body>
 </html>
-
