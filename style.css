@@ -1,79 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Building Train</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KL1SY9HPQR"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-      gtag('config', 'G-KL1SY9HPQR');
-    </script>
-</head>
-<body onload="includeHTML()">
-    <div include-html="header.html"></div>
-    <section class="hero">
-        <h1>What if a machine could build a building?</h1>
-        <p>Exploring the future of automated construction</p>
-    </section>
-    <section class="cards">
-        <div class="card">
-            <h2>Card 1</h2>
-            <p>Description for card 1.</p>
-        </div>
-        <div class="card">
-            <h2>Card 2</h2>
-            <p>Description for card 2.</p>
-        </div>
-        <div class="card">
-            <h2>Card 3</h2>
-            <p>Description for card 3.</p>
-        </div>
-    </section>
-    <section class="image-text">
-        <div class="image">
-            <img src="your-image-url.jpg" alt="Image Description">
-        </div>
-        <div class="text">
-            <h2>Image and Text Section</h2>
-            <p>Description for image and text section.</p>
-        </div>
-    </section>
-    <section class="another-section">
-        <h2>Another Section</h2>
-        <p>Description for another section.</p>
-    </section>
-    <footer>
-        <p>&copy; 2024 The Building Train. All rights reserved.</p>
-    </footer>
-    <script>
-        function includeHTML() {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                    xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function() {
-                        if (this.readyState == 4) {
-                            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                            elmnt.removeAttribute("include-html");
-                            includeHTML();
-                        }
-                    }      
-                    xhttp.open("GET", file, true);
-                    xhttp.send();
-                    return;
-                }
-            }
-        }
-    </script>
-</body>
-</html>
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cards, .image-text, .another-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    display: inline-block;
+    width: calc(33.333% - 2rem);
+    box-sizing: border-box;
+}
+
+.image-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-text .image, .image-text .text {
+    flex: 1;
+    padding: 1rem;
+}
+
+.image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 2rem);
+    }
+
+    .image-text {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
