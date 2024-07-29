@@ -34,6 +34,11 @@ nav a {
     transition: background-color 0.3s;
 }
 
+img {
+  width: 200px;
+  height: 150px;
+}
+
 nav a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
@@ -59,6 +64,8 @@ nav a:hover {
     max-width: 600px;
     margin: 0 auto;
 }
+
+
 
 .cards, .image-text, .another-section {
     padding: 2rem;
