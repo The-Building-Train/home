@@ -19,6 +19,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 1.5rem;
+    display: inline-block;
 }
 
 nav {
@@ -37,6 +38,7 @@ nav a {
 img {
   width: 200px;
   height: 150px;
+  display: inline-block;
 }
 
 nav a:hover {
